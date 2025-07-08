@@ -8,6 +8,11 @@ import plotly.express as px
 # Cargar los datos de Excel
 Dataf = pd.read_excel('datos_estudiantes_limpio.xlsx')
 print(Dataf)
+#inicializar la app
+app = dash.Dash(__name__)
+#Definir el servidor en render
+server = app.server
+app.tittle='Esistica notas'
 
 # Inicialización de la app
 Estanotas = dash.Dash(__name__, title='Estadística de Notas')
